@@ -1,22 +1,27 @@
+import { Card } from '@components/Card/Card'
 import React, { useEffect, useState } from 'react'
+import style from './index.module.css';
 
 const Home = () => {
-  const [cat, setCat] = useState([])
+  const [productList, setProductList] = useState([])
   useEffect(() => {
-    window.fetch('api/cat')
-    .then(res => res.json())
-    .then(({allEntries}) => setCat(allEntries))
+    // Especificamos que usaremos window
+		window
+      .fetch('/api/cat')
+      .then((response) => response.json())
+      .then( ({data}) => {
+        setProductList(data)
+      })
   }, [])
-  
   return (
-    <div>
+    <section className={style.product}>
       {
-        cat.map(item => (
-          <h1>{item.id}</h1>
+        productList.map((item)=>(
+          <Card key={item.id} image={item.image} bid={item.bid} id={item.id} name={item.name} like={item.like}/>
         ))
-      }
-    </div>
+        }
+    </section>
   )
 }
 
-export default Home
+export default Home 

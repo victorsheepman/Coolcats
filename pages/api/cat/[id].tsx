@@ -1,14 +1,24 @@
 import { NextApiRequest, NextApiResponse } from "next";
 import Database from "../../../database/db";
-
+import enablePublicAccess from '@cors';
 const CatDetail = async (req: NextApiRequest, res: NextApiResponse) => {
-    //connect to database and get data of item
-    const db = new Database()
-    const id = req.query.id as string
-    const entry = await db.getById(id);
-
-    //data response
-    res.status(200).json({entry})
+    try {
+        // Generally, you would not want this in your apps.
+        // See more in 'cors.js'
+        await enablePublicAccess(req, res)
+    
+        const db = new Database()
+        const avoId = req.query.id as string
+    
+        const avo = await db.getById(avoId)
+    
+        // Notice: We're using Next.JS response helpers here :)
+        // https://nextjs.org/docs/api-routes/response-helpers
+        res.status(200).json(avo)
+      } catch (e) {
+        console.error(e)
+        res.status(404).end()
+      }
 }
 
 export default CatDetail;

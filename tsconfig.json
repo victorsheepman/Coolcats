@@ -17,7 +17,16 @@
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "jsx": "preserve"
+    "jsx": "preserve",
+    "paths": {
+			// creamos los atajos
+      "@database": ["database/db.ts"],
+      "@components/*": ["components/*"],
+      "@styles/*": ["styles/*"],
+      "@public/*": ["public/*"],
+      "@cors": ["cors-middleware.ts"],
+    },
+    "baseUrl": ".",
   },
   "include": [
     "next-env.d.ts",
