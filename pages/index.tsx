@@ -1,7 +1,17 @@
 import { Card } from '@components/Card/Card'
 import React, { useEffect, useState } from 'react'
 import style from './index.module.css';
-
+/*
+export const getStaticProps = async ()=>{
+  const response = await fetch('https://coolcats-six.vercel.app/api/cat')
+  const { data: productList } = await response.json();
+  return {
+    props:{
+      productList
+    }
+  }
+}
+*/
 const Home = () => {
   const [productList, setProductList] = useState([])
   useEffect(() => {
