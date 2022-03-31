@@ -15,6 +15,7 @@
   "dependencies": {
     "@zeit/next-css": "^1.0.1",
     "cors": "^2.8.5",
+    "express": "^4.17.3",
     "next": "^12.1.0",
     "nextjs-fonts": "^0.22.0",
     "react": "^17.0.2",
