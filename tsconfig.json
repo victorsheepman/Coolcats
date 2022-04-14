@@ -20,7 +20,7 @@
     "jsx": "preserve",
     "paths": {
 			// creamos los atajos
-      "@database": ["database/db.ts"],
+      "@database": ["database/*"],
       "@components/*": ["components/*"],
       "@styles/*": ["styles/*"],
       "@public/*": ["public/*"],

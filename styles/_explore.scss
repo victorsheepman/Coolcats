@@ -1,0 +1,46 @@
+.explore{
+    &__poster{
+        width: 100%;
+        height: 284px;
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    &__header{
+        width: 100%;
+        height: 197px;
+        padding-top: 64px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    &__nav{
+        width: 100%;
+        height: 39px;
+        margin-top: 40px;
+        padding-left: porcentaje(83);
+        padding-right: porcentaje(83);
+        &__items{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            border-bottom: 1px solid $color-grey;
+            li{
+                list-style: none;
+                color: $color-black ;
+            }
+        }
+    }
+    &__container{
+        width: 100%;
+        height: 1544px;
+        padding: 40px porcentaje(83) 80px porcentaje(83);
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+}

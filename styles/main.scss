@@ -1,0 +1,15 @@
+//global styles
+@import './mixins';
+@import './colors';
+@import './font';
+@import './base';
+
+//pages
+@import './explore';
+@import './cat';
+@import './index';
+
+//components
+@import '@components/Live/Live';
+@import '../components/Colection/Colection';
+@import '../components/Category/Category';
