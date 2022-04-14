@@ -1,4 +1,3 @@
-
 .colections{
     width: 100%;
     height: 658px;
@@ -175,4 +174,12 @@
             }
         }
     }
+}
+.product{
+    height: 666px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-left: porcentaje(83);
+    padding-right: porcentaje(83);
 }

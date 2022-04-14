@@ -1,6 +1,5 @@
 //import { Catedory } from '@components/Category/Catedory';
 import { Category } from '@components/Category/Category';
-import Link from 'next/link';
 import React, { useEffect, useState } from 'react'
 
 const explore = () => {
@@ -35,21 +34,11 @@ const explore = () => {
         </header>
         <div className='explore__container'>
             {
-                category.map(item=>{
-                    if (item.link == true){
-                        debugger;
-                        return(
-                            <Link href='/cat' passHref>
-                                <Category key={item.id} title={item.title}  description={item.description} poster={item.poster} perfil={item.perfil} />
-                            </Link>       
-                        )
-                    }else{
-                        return(
-                            <Category key={item.id} title={item.title}  description={item.description} poster={item.poster} perfil={item.perfil} />
-                        )
-                    }
-                    
-                })
+                category.map(item=>(
+                        <Category key={item.id} title={item.title} creator={item.creator}  description={item.description} poster={item.poster} perfil={item.perfil} />
+                    )
+                
+                )
             }
         </div>
     </>

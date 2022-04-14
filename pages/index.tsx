@@ -1,6 +1,7 @@
 import { Card } from '@components/Card/Card'
 import { Colection } from '@components/Colection/Colection';
 import { Live } from '@components/Live/Live';
+import Link from 'next/link';
 import React, { useEffect, useState } from 'react'
 
 
@@ -54,9 +55,11 @@ const Home = ({productList}) => {
         <article className='hero__title'>
           <h1 className='title-45'>Descubra, recopile y venda NFT extraordinarios</h1>
           <h3 className='sub-medium'>en el primer y más grande mercado de NFT del mundo</h3>
-          <button className='hero__button'>
-            <span className='body-16-bold'>Explorar</span>
-          </button>
+          <Link href='/explore'>
+            <button className='hero__button'>
+              <span className='body-16-bold'>Explorar</span>
+            </button>
+          </Link>
         </article>
         <div className='hero__card'>
           <figure>
