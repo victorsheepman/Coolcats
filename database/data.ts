@@ -88,9 +88,9 @@ const data = {
   },
   '8785': {
     name: 'Cool Cat',
-    id: '8787',
+    id: '8785',
     bid: 0.15,
-    image: '/images/8785f.png',
+    image: '/images/8785.png',
     attributes: {
       description:
       'Cool Cats es una colección de 9,999 NFTs generados aleatoriamente y cuidadosamente seleccionados que existen en Ethereum Blockchain. Los poseedores de Cool Cat pueden participar en eventos exclusivos como reclamos de NFT, rifas, obsequios comunitarios y más. Recuerde, todos los gatos son geniales, pero algunos son más geniales que otros.',

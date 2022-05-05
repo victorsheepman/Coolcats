@@ -3,7 +3,7 @@ import { useRouter } from 'next/router'
 import React, { useEffect, useState } from 'react'
 
 export const getStaticPaths = async () =>{
-  const response = await fetch('https://coolcats-six.vercel.app/api/cat')
+  const response = await fetch('https://coolcats-victorsheepman.vercel.app/api/cat')
   const { data: productList } = await response.json();
 
   const paths = productList.map(({id})=>({
@@ -18,7 +18,7 @@ export const getStaticPaths = async () =>{
 }
 export const getStaticProps = async ({ params })=>{
   const id = params?.id as string;
-  const response = await fetch(`https://coolcats-six.vercel.app/api/cat/${id}`)
+  const response = await fetch(`https://coolcats-victorsheepman.vercel.app/api/cat`)
   const data  = await response.json();
   return{
     props: {
