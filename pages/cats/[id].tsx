@@ -16,14 +16,18 @@ export const getStaticPaths = async () =>{
     fallback: false
   }
 }
-export const getStaticPropse = async ({ params })=>{
+export const getStaticProps = async ({ params })=>{
   const id = params?.id as string;
   const response = await fetch(`https://coolcats-six.vercel.app/api/cat/${id}`)
-  const { data: productList} = await response.json();
-  console.log(productList);
+  const data  = await response.json();
+  return{
+    props: {
+      data
+    },
+  }
 }
-const Cat = ({product}) => {
-  console.log(product);
+const Cat = ({data}) => {
+  console.log(data);
   
   const [cat, setCat] = useState(null)
     const {
